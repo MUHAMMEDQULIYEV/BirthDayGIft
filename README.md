@@ -18,7 +18,7 @@ This repository contains a Replit-exported pnpm workspace for a romantic interac
 
 3. Open `http://localhost:5173`.
 
-## Useful commands
+## .Useful commands
 
 - `pnpm run dev` — run the website
 - `pnpm run dev:api` — run the API server on `http://localhost:5000`
