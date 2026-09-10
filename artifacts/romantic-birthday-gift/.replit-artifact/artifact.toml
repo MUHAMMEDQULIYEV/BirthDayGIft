@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Romantic Birthday Gift"
+description = "A private, interactive birthday experience in Azerbaijani with romantic reveals, a gift-box moment, a love letter, and a final celebration."
+version = "1.0.0"
+id = "artifacts/romantic-birthday-gift"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20002
+
+[services.development]
+run = "pnpm --filter @workspace/romantic-birthday-gift run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/romantic-birthday-gift", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/romantic-birthday-gift/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20002"
+BASE_PATH = "/"

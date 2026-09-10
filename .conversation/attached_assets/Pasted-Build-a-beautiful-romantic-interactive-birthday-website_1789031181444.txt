@@ -1,0 +1,333 @@
+Build a beautiful, romantic, interactive birthday website for my girlfriend.
+
+The website should feel like a **personal digital birthday gift**, not a generic template. The overall experience should be cute, elegant, emotional, and memorable.
+
+She loves the color **pink**, so pink should be the main visual theme.
+
+## CORE DESIGN
+
+Style:
+
+* Romantic
+* Soft
+* Elegant
+* Dreamy
+* Premium-looking
+* Cute but NOT childish
+* Mobile-first
+* Fully responsive
+* Smooth animations and transitions
+
+Use a sophisticated pink palette:
+
+* Soft blush pink
+* Pastel pink
+* Rose pink
+* White/cream
+* Deep rose for important text
+* Very subtle gold accents
+
+Do NOT make everything neon pink.
+
+The website should feel like she is **opening a carefully made digital birthday present**.
+
+---
+
+# PAGE 1 — THE ENTRANCE
+
+When she first opens the website, show a beautiful minimal screen.
+
+Text:
+
+"Hey, beautiful..."
+
+Then:
+
+"I made something special for you."
+
+Large elegant button:
+
+"Open your birthday gift ♡"
+
+When she clicks:
+
+* smooth transition
+* floating hearts
+* subtle sparkles
+* transition into the birthday experience
+
+---
+
+# PAGE 2 — BIRTHDAY MESSAGE
+
+This page should be entirely in **Azerbaijani**.
+
+Show a beautiful romantic birthday introduction.
+
+Main message:
+
+"Bəlim, həyatım, gözüm mənim, səni çox sevirəm.
+Sənin üçün xüsusi bir şey etdim. Hədiyyəni aç. ♡"
+
+Then:
+
+"Sənin mənimlə keçirdiyin ilk yubileyin mübarək olsun.
+Yaxşı ki, həyatımdasan."
+
+Make the text appear with a beautiful, gentle fade/typewriter animation.
+
+Use an elegant pink background with subtle floating hearts and sparkles.
+
+Add a button:
+
+"Başlayaq ♡"
+
+---
+
+# PAGE 3 — DELETE THIS PAGE
+
+Do NOT create the previous "Our Memories" page.
+
+There should be no photo/memory gallery in this version.
+
+---
+
+# PAGE 3 / SECTION 3 — THINGS I LOVE ABOUT YOU
+
+After the birthday message, create a section titled:
+
+"Səndə sevdiyim şeylər ♡"
+
+Everything after the title should be in **Azerbaijani**.
+
+Create beautiful interactive cards.
+
+Cards:
+
+"Gülüşün"
+"Xeyirxahlığın"
+"Gülməyin"
+"Məni hiss etdirməyin"
+"Kiçik vərdişlərin"
+"Sadəcə... sən"
+
+When she clicks/taps a card, reveal a short romantic Azerbaijani message.
+
+For example:
+
+"Gülüşünü görəndə mən də istər-istəməz gülümsəyirəm."
+
+"İnsanlara qarşı olan gözəl münasibətin səni mənim üçün daha da xüsusi edir."
+
+"Ən adi anları belə gözəl etməyi bacarırsan."
+
+Make these messages easy to edit from a central data/config file.
+
+Cards should have:
+
+* soft pink gradients
+* elegant rounded corners
+* subtle shadows
+* hover/tap animation
+* heart/sparkle effects when opened
+
+---
+
+# PAGE 4 — THE GIFT BOX
+
+This should be the main interactive feature.
+
+Show a beautiful animated pink gift box in the center.
+
+Text:
+
+"Bir sürprizim də var..."
+
+Button:
+
+"Aç ♡"
+
+When she clicks:
+
+* gift box opens with a polished animation
+* hearts and subtle confetti appear
+* sparkles appear
+* background becomes more magical
+* transition to the next section
+
+Make the animation feel satisfying and special.
+
+---
+
+# PAGE 5 — MY LETTER
+
+This section should be entirely in **Azerbaijani**.
+
+Title:
+
+"Sənə bir məktubum var ♡"
+
+Create a beautiful card that looks like a handwritten physical love letter.
+
+The main message should communicate:
+
+"Bu məktubumda sənə nə qədər çox sevdiyimi və mənim üçün canımın içi olduğunu demək istəyirəm. Hər zaman yanında olacağam və səni çox sevəcəyəm."
+
+Use this as the core message, but present it beautifully with natural line breaks and typography.
+
+The letter should appear gradually with a soft typewriter/reveal animation.
+
+Make the text large enough to read comfortably on a phone.
+
+Make the letter text easy to edit in the central configuration/data file.
+
+---
+
+# PAGE 6 — FINAL BIRTHDAY SURPRISE
+
+This is the final emotional section.
+
+Everything on this page should be in **Azerbaijani**.
+
+Large heading:
+
+"Ad günün mübarək, [HER NAME] ♡"
+
+Then:
+
+"Ümid edirəm ki, hazırladığım bu kiçik hədiyyə sənə mənim üçün nə qədər xüsusi olduğunu xatırladar."
+
+Then:
+
+"Səni çox sevirəm. ♡"
+
+Add a beautiful animated heart in the center.
+
+After a few seconds, trigger a subtle full-screen heart/confetti animation.
+
+Add:
+
+"Səninlə daha çox gözəl xatirələrə..."
+
+And a button:
+
+"Yenidən bax ♡"
+
+The button should restart the experience from the beginning.
+
+---
+
+# MUSIC
+
+Add optional background music.
+
+Do NOT automatically play music with sound because browsers often block autoplay.
+
+Instead, add a small music button in the corner:
+
+"♫"
+
+Clicking it should start/stop the music.
+
+Make it easy for me to replace the audio file with my own song.
+
+---
+
+# TECHNICAL REQUIREMENTS
+
+Use:
+
+* React
+* Vite
+* Tailwind CSS
+* Framer Motion or another appropriate animation library
+* Lucide icons if useful
+
+The website must:
+
+* work perfectly on mobile
+* work on desktop
+* load quickly
+* have smooth transitions
+* have accessible buttons
+* avoid excessive animations that hurt performance
+* require no backend
+* use clean reusable React components
+
+Organize the project clearly.
+
+For example:
+
+/src
+/components
+/sections
+/assets
+/data
+
+Create a central configuration/data file where I can easily change:
+
+* girlfriend's name
+* birthday messages
+* letter
+* card messages
+* photos if I add them later
+* music
+* final message
+
+---
+
+# DESIGN DETAILS
+
+Use:
+
+* elegant serif font for romantic headings
+* clean modern sans-serif font for body text
+* soft pink gradients
+* rounded cards
+* subtle shadows
+* glassmorphism where appropriate
+* floating hearts
+* subtle particles
+* sparkles
+* smooth fade-in animations
+* gentle scaling effects
+* beautiful transitions
+
+Do NOT:
+
+* use cheesy clipart
+* make it look like a children's Valentine's Day template
+* use excessive emojis
+* use excessive neon pink
+* overcrowd the screen
+* use huge blocks of text
+* make it look like a generic website template
+
+The design should feel like a **premium romantic digital experience**.
+
+---
+
+# PERSONAL AND EMOTIONAL DETAILS
+
+The most important goal is not simply to make the website visually beautiful.
+
+It should feel like:
+
+**"My boyfriend actually spent time creating this specifically for me."**
+
+The user should discover the website progressively rather than seeing everything at once.
+
+Add small unexpected interactions:
+
+* tiny hearts when buttons are clicked
+* subtle sparkle effects
+* gentle tap/click animations
+* animated progress indicator
+* smooth transitions
+* "Made with love ♡" at the end
+
+Keep the experience romantic and tasteful.
+
+Build the **complete polished working website**, not just a prototype.
+
+Make all personal content easy to replace later without changing the main React components.
