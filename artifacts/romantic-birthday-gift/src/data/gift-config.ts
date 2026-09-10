@@ -8,7 +8,6 @@ export const giftConfig = {
   // CHANGE ME: sevgilinin adını burada dəyiş.
   name: 'Vüsalə',
   shortDate: 'Sənin günün',
-  musicPath: '/music/soft-piano.mp3',
   entrance: {
     eyebrow: '',
     title: 'Hey, beautiful...',

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import {
   ArrowRight,
@@ -6,11 +6,8 @@ import {
   ChevronDown,
   Gift,
   Heart,
-  Music2,
-  Music3,
   RotateCcw,
   Sparkles,
-  VolumeX,
 } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -62,23 +59,6 @@ function FloatingAtmosphere() {
         </motion.div>
       ))}
     </div>
-  );
-}
-
-function MusicToggle({ isOn, onToggle, hasError }: { isOn: boolean; onToggle: () => void; hasError: boolean }) {
-  return (
-    <button
-      type="button"
-      data-testid="button-music-toggle"
-      onClick={onToggle}
-      aria-label={isOn ? 'Musiqini dayandır' : 'Musiqini başlat'}
-      className="group fixed right-4 top-4 z-30 flex items-center gap-2 rounded-full border border-rose-200/80 bg-[#fff7ee]/80 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-rose-900 shadow-[0_8px_28px_rgba(124,42,67,0.08)] backdrop-blur-md transition hover:border-rose-300 hover:bg-[#fff7ee] sm:right-7 sm:top-7"
-    >
-      <span className="grid size-6 place-items-center rounded-full bg-rose-100 text-rose-700">
-        {hasError ? <VolumeX size={13} /> : isOn ? <Music3 className="animate-pulse" size={13} /> : <Music2 size={13} />}
-      </span>
-      <span className="hidden sm:inline">{hasError ? 'Musiqi yoxdur' : isOn ? 'Musiqi açıq' : 'Səssiz'}</span>
-    </button>
   );
 }
 
@@ -356,28 +336,12 @@ function FinalScreen({ onRestart }: { onRestart: () => void }) {
 
 function Experience() {
   const [step, setStep] = useState(0);
-  const [musicOn, setMusicOn] = useState(false);
-  const [musicError, setMusicError] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  useEffect(() => {
-    if (!audioRef.current) return;
-    if (musicOn) {
-      void audioRef.current.play().catch(() => {
-        setMusicOn(false);
-        setMusicError(true);
-      });
-    } else {
-      audioRef.current.pause();
-    }
-  }, [musicOn]);
   const next = () => setStep((current) => Math.min(totalSteps, current + 1));
-  const restart = () => { setStep(0); setMusicOn(false); };
+  const restart = () => setStep(0);
   return (
     <main className="gift-noise relative min-h-[100dvh] overflow-hidden bg-[#f8eee9]">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top_left,rgba(238,189,194,.38),transparent_42%),radial-gradient(ellipse_at_bottom_right,rgba(240,212,170,.2),transparent_40%)]" />
       <FloatingAtmosphere />
-      <MusicToggle isOn={musicOn} hasError={musicError} onToggle={() => setMusicOn((current) => !current)} />
-      <audio ref={audioRef} src={giftConfig.musicPath} loop preload="none" onError={() => setMusicError(true)} aria-hidden="true" />
       <AnimatePresence mode="wait">
         {step === 0 && <IntroScreen key="intro" onStart={next} />}
         {step === 1 && <BirthdayScreen key="birthday" onNext={next} />}
